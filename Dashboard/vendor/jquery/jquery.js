@@ -10070,5 +10070,27 @@ if ( !noGlobal ) {
 }
 
 
+
 return jQuery;
 } );
+
+function redirect() {
+	var selectvalue = $('input[name=gridRadios]:checked', '#loginForm').val();
+	var email = $('input[name=email]', '#loginForm').val();
+		var pass = $('input[name=password]', '#loginForm').val();
+		//console.log(email+" "+pass);
+	if(email == "test@test.com" && pass=="testing"){
+		if(selectvalue == "patient"){
+			alert('Patient dashboard not ready!!!');
+			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/login.html','_self');
+		return false;
+		}
+		if(selectvalue == "coach"){
+			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/index.html','_self');
+		return false;
+		}
+	} else {
+		alert('Wrong Email and password!!!');
+			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/login.html','_self');
+	}
+};
