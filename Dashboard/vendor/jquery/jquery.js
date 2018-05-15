@@ -10082,15 +10082,15 @@ function redirect() {
 	if(email == "test@test.com" && pass=="testing"){
 		if(selectvalue == "patient"){
 			alert('Patient dashboard not ready!!!');
-			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/login.html','_self');
+			window.location.reload(true);
 		return false;
 		}
 		if(selectvalue == "coach"){
-			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/index.html','_self');
+			window.open(location.pathname+'/../index.html','_self');
 		return false;
 		}
 	} else {
 		alert('Wrong Email and password!!!');
-			window.open('file:///Users/vijayvishwakarma/Documents/herbeat_2.1/Dashboard/pages/login.html','_self');
+		window.location.reload(true);
 	}
 };
