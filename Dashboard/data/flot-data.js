@@ -1050,16 +1050,16 @@ $(function() {
     ];
 
     function euroFormatter(v, axis) {
-        return v.toFixed(axis.tickDecimals) + "€";
+        return v.toFixed(axis.tickDecimals);
     }
 
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
             data: oilprices,
-            label: "Oil price ($)"
+            label: "Heart Rate"
         }, {
             data: exchangerates,
-            label: "USD/EUR exchange rate",
+            label: "Calories",
             yaxis: 2
         }], {
             xaxes: [{
@@ -1123,7 +1123,7 @@ $(function() {
         while (data.length < maximum) {
             var previous = data.length ? data[data.length - 1] : 50;
             var y = previous + Math.random() * 10 - 5;
-            data.push(y < 0 ? 0 : y > 100 ? 100 : y);
+            data.push(y < 60 ? 67 : y > 100 ? 98 : y);
         }
 
         // zip the generated y values with the x values

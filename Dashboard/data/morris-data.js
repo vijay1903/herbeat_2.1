@@ -64,14 +64,14 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
-            value: 12
+            label: "Sitting Time",
+            value: 400
         }, {
-            label: "In-Store Sales",
-            value: 30
+            label: "Standing Time",
+            value: 300
         }, {
-            label: "Mail-Order Sales",
-            value: 20
+            label: "Walking Time",
+            value: 275
         }],
         resize: true
     });
@@ -79,37 +79,37 @@ $(function() {
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            y: '2006',
-            a: 100,
-            b: 90
+            y: '01',
+            a: 90,
+            b: 82
         }, {
-            y: '2007',
+            y: '02',
             a: 75,
             b: 65
         }, {
-            y: '2008',
-            a: 50,
-            b: 40
+            y: '03',
+            a: 70,
+            b: 60
         }, {
-            y: '2009',
+            y: '04',
             a: 75,
             b: 65
         }, {
-            y: '2010',
-            a: 50,
-            b: 40
+            y: '05',
+            a: 90,
+            b: 70
         }, {
-            y: '2011',
+            y: '06',
             a: 75,
             b: 65
         }, {
-            y: '2012',
-            a: 100,
-            b: 90
+            y: '07',
+            a: 90,
+            b: 70
         }],
         xkey: 'y',
         ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
+        labels: ['Max', 'Min'],
         hideHover: 'auto',
         resize: true
     });
